@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+class time{
+private:
+    int hours;
+    int minutes;
+    int seconds;
+public:
+void takeInput(){
+        cout<<"Enter time:"<<endl;
+        cout<<"Hours:";
+        cin>>hours;
+        cout<<endl<<"Minutes:";
+        cin>>minutes;
+        cout<<endl<<"Seconds:";
+        cin>>seconds;
+    };
+   void  printOutput(){
+        cout<<endl<<"The time is = ";
+        if(hours<=9){cout<<"0"<<hours;}else{cout<<hours;}
+            cout<<":";
+        if(minutes<=9){cout<<"0"<<minutes;}else{cout<<minutes;}
+            cout<<":";
+        if(seconds<=9){cout<<"0"<<seconds;}else{cout<<seconds;}
+        cout<<endl<<"Time in total seconds: "<<3600*hours+60*minutes+seconds;
+    }
+};
+
+int main()
+{
+    time object;
+    object.takeInput();
+    object.printOutput();
+
+    return 0;
+}
